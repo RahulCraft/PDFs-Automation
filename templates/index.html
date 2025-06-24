@@ -1,12 +1,89 @@
 <!DOCTYPE html>
-<html>
-<head><title>Permit Contact Extractor</title></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Permit Contact Extractor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f4f6f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      border-radius: 16px;
+      padding: 50px 40px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      width: 500px;
+      max-width: 90%;
+      text-align: center;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 15px 16px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+      border-color: #4a90e2;
+      outline: none;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 14px 28px;
+      font-size: 16px;
+      color: white;
+      background: #4a90e2;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background: #357bd8;
+      transform: scale(1.03);
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #999;
+    }
+  </style>
+</head>
 <body>
-    <h2>Enter Google Drive PDF Link</h2>
-    <form method="POST">
-        <input type="text" name="drive_link" placeholder="Paste Google Drive link" style="width:400px" required>
-        <button type="submit">Extract</button>
+  <div class="container">
+    <h2>🔎 Extract Contact Info from Google Drive PDF</h2>
+    <form method="post">
+      <input type="text" name="drive_link" placeholder="Paste Google Drive PDF link here..." required />
+      <button type="submit">Extract</button>
     </form>
-    {% if error %}<p style="color:red;">{{ error }}</p>{% endif %}
+    <div class="footer">OneAim IT Solutions © 2025</div>
+  </div>
 </body>
 </html>

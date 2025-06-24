@@ -1,3 +1,11 @@
+*.pyc
+__pycache__/
+permit_automation/creds/service-account.json
+output/
+
+
+
+
 # Logs
 logs
 *.log

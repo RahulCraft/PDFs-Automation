@@ -4,6 +4,7 @@ import pandas as pd
 EXCEL_PATH = "permit_automation/output/final_output.xlsx"
 
 def write_to_excel(all_data):
+    # all_data = list of dicts
     rows = []
     for data in all_data:
         row = {
